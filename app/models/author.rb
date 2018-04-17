@@ -1,5 +1,5 @@
 class Author < ActiveRecord::Base
     validates :title, presence: true
     validates :content, length: { minimum: 100 }
-    validates :inclusion, {with: (Fiction Non-Fiction)}
+    validates :inclusion, {with: %w(Fiction Non-Fiction)}
 end
