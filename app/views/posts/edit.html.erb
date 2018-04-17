@@ -2,7 +2,7 @@
 <% if !@errors.nil? %>
   <div class="error_explanation">
     <% @errors.each do | error | %>
-      <li><%= error.message %></li>
+      <li><%= error.full_messages %></li>
     <% end %>
   </div>
 <% end %>
