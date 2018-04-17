@@ -1,8 +1,8 @@
 <h2>Editing "<%= @post.title %>"</h2>
 <% if !@errors.nil? %>
   <div class="error_explanation">
-    <% @errors.each do | error | %>
-      <li><%= error.full_messages %></li>
+    <% @errors.full_messages.each do | error | %>
+      <li><%= error %></li>
     <% end %>
   </div>
 <% end %>
