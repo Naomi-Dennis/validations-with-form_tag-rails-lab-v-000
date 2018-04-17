@@ -9,9 +9,9 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find(params[:id])
-    @errors = nil 
+    @errors = nil
     if @post.valid?
-      @post.update(post_params)
+        @post.update(post_params)
         redirect_to post_path(@post)
     else
       @errors = @post.errors.messages
