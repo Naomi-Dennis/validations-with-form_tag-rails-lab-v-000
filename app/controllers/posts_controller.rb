@@ -14,7 +14,7 @@ class PostsController < ApplicationController
         @post.update(post_params)
         redirect_to post_path(@post)
     else
-      @errors = @post.errors.messages
+      @errors = @post.errors.full_messages
       render :edit
     end
   end
