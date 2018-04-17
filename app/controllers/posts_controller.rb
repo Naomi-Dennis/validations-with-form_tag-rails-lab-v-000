@@ -13,7 +13,7 @@ class PostsController < ApplicationController
     if @post.valid?
         redirect_to post_path(@post)
     else
-      @errors = @post.errors
+      @errors = @post.errors.messages
       render :edit
     end
   end
